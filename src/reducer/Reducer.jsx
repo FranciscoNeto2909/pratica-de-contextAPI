@@ -11,7 +11,7 @@ export function userReducer(state=initialState, action) {
         case Types.CHANGE_NAME:
             return {...state, name:action.payload.name}
         case Types.CHANGE_EMAIL:
-            return {...state, name:action.payload.email}
+            return {...state, email:action.payload.email}
         case Types.LOGIN:
             return {...state, loged:true}
         case Types.LOGOUT:

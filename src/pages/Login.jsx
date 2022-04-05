@@ -21,13 +21,22 @@ export default function Login() {
     }
     function handleLogin(e) {
         e.preventDefault()
-        dispatch({type:Types.LOGIN})
-        dispatch({
-            type:Types.CHANGE_NAME,
-            payload:{
-                name
-            }
-        })
+        if(name && email && pass !== ""){
+            dispatch({type:Types.LOGIN})
+            dispatch({
+                type:Types.CHANGE_NAME,
+                payload:{name}
+            })
+            dispatch({
+                type:Types.CHANGE_EMAIL,
+                payload:{email}
+            })
+            setName("")
+            setEmail("")
+            setPass("")
+        }else{
+            alert("Preencha os campos para ter acesso as paginas")
+        }
     }
 
     return(
