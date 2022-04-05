@@ -1,0 +1,31 @@
+.container,.notFound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 90vh;
+    width: 100vw;
+}
+.notFound{
+    height: 200px;
+    width: 300px;
+    border-radius: 15px;
+    background-color: #a9a9a9cc;
+}
+form{
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:darkgray;
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    color: #fff;
+    align-self: flex-start;
+}
+form input{
+    margin-bottom:5px;
+}

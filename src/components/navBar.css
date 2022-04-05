@@ -23,10 +23,17 @@ nav a{
     align-items: center;
     margin-right:25px;
 }
-.login button{
+.login a{
     border: 1px solid darkgray;
-    border-radius: 15px;
+    border-radius: 10px;
     padding: 5px;
     background-color: inherit;
     color: #fff;
+    cursor: pointer;
+}
+.login a:hover{
+    background-color: #222;
+}
+.login a:active{
+    border: 1px solid #333;
 }
