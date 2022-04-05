@@ -1,7 +1,9 @@
 import { useState,useContext } from "react"
 import { Types } from "../actionTypes/Types"
+import {useNavigate} from "react-router-dom"
 
 import { Context } from "../context/Context"
+import Inicio from "../pages/Inicio"
 import "./pages.css"
 
 export default function Login() {
@@ -9,7 +11,7 @@ export default function Login() {
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
     const {state, dispatch} = useContext(Context)
-
+    const navigate = useNavigate()
     function handleSetName(e) {
         setName(e.target.value)
     }
@@ -34,6 +36,7 @@ export default function Login() {
             setName("")
             setEmail("")
             setPass("")
+            navigate("/")
         }else{
             alert("Preencha os campos para ter acesso as paginas")
         }
